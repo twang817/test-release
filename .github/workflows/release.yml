@@ -23,6 +23,10 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - run: |
+          git tag v1.0.16
+          git push "https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/twang817/test-release" --tags
+
       # - name: Setup Node.js
       #   uses: actions/setup-node@v3
       #   with:
@@ -43,7 +47,3 @@ jobs:
       #   env:
       #     GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
       #     # GITHUB_TOKEN: ${{ secrets.PAT }}
-
-      - run: |
-        git tag v1.0.16
-        git push "https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/twang817/test-release" --tags
