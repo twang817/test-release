@@ -38,27 +38,27 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      #- name: Setup Node.js
-      #  uses: actions/setup-node@v3
-      #  with:
-      #    node-version: "lts/*"
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
 
-      #- name: Install dependencies
-      #  run: |
-      #    npm i -g \
-      #      semantic-release \
-      #      conventional-changelog-conventionalcommits \
-      #      @semantic-release/changelog \
-      #      @google/semantic-release-replace-plugin \
-      #      @semantic-release/git
+      - name: Install dependencies
+        run: |
+          npm i -g \
+            semantic-release \
+            conventional-changelog-conventionalcommits \
+            @semantic-release/changelog \
+            @google/semantic-release-replace-plugin \
+            @semantic-release/git
 
-      #- name: Semantic Release
-      #  run: |
-      #    semantic-release --debug
-      #  env:
-      #    #GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-      #    GITHUB_TOKEN: ${{ secrets.PAT }}
+      - name: Semantic Release
+        run: |
+          semantic-release --debug
+        env:
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+          # GITHUB_TOKEN: ${{ secrets.PAT }}
 
-      - run: |
-          git tag v1.0.16
-          git push "https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/twang817/test-release" --tags
+      # - run: |
+      #     git tag v1.0.16
+      #     git push "https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/twang817/test-release" --tags
