@@ -26,26 +26,30 @@ jobs:
       - run: |
           which git
           echo "${{ steps.generate_token.outputs.token }}" | sed 's/./& /g'
-          #git tag v1.0.16
-          #git push --tags "https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/twang817/test-release"
+          echo "v1.0.19" > foo
+          git add foo
+          git commit -m "chore(release): 1.0.19 [skip ci]"
+          git push "https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/twang817/test-release" head
+          git tag v1.0.19
+          git push --tags "https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/twang817/test-release"
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "lts/*"
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: "lts/*"
 
-      - name: Install dependencies
-        run: |
-          npm i -g \
-            https://github.com/twang817/semantic-release.git#test \
-            conventional-changelog-conventionalcommits \
-            @semantic-release/changelog \
-            @google/semantic-release-replace-plugin \
-            @semantic-release/git
+      # - name: Install dependencies
+      #   run: |
+      #     npm i -g \
+      #       https://github.com/twang817/semantic-release.git#test \
+      #       conventional-changelog-conventionalcommits \
+      #       @semantic-release/changelog \
+      #       @google/semantic-release-replace-plugin \
+      #       @semantic-release/git
 
-      - name: Semantic Release
-        run: |
-          semantic-release --debug
-        env:
-          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-          # GITHUB_TOKEN: ${{ secrets.PAT }}
+      # - name: Semantic Release
+      #   run: |
+      #     semantic-release --debug
+      #   env:
+      #     GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+      #     # GITHUB_TOKEN: ${{ secrets.PAT }}
