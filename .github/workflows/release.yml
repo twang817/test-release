@@ -56,4 +56,5 @@ jobs:
         run: |
           semantic-release --debug
         env:
-          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+          #GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+          GH_TOKEN: ${{ secrets.PAT }}
