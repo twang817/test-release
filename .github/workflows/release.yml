@@ -39,6 +39,8 @@ jobs:
           npm i -g \
             https://github.com/twang817/semantic-release.git#test \
             conventional-changelog-conventionalcommits \
+            @semantic-release/changelog \
+            @google/semantic-release-replace-plugin \
 
       - name: Semantic Release
         run: |

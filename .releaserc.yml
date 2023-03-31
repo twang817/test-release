@@ -4,4 +4,20 @@ plugins:
   - '@semantic-release/release-notes-generator'
   - '@semantic-release/github'
 
+  # generate changelog CHANGELOG.md
+  - '@semantic-release/changelog'
+
+  # update pyproject.toml with newest version
+  - - '@google/semantic-release-replace-plugin'
+    - replacements:
+      - files: [pyproject.toml]
+        from: "version = \".*\""
+        to: "version = \"${nextRelease.version}\""
+        results:
+          - file: pyproject.toml
+            hasChanged: true
+            numMatches: 1
+            numReplacements: 1
+        countMatches: true
+
 preset: conventionalcommits
