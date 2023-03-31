@@ -33,13 +33,13 @@ jobs:
           app_id: ${{ secrets.BOT_APP_ID }}
           private_key: ${{ secrets.BOT_PRIVATE_KEY }}
 
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
           # https://github.com/semantic-release/github/issues/175#issuecomment-1122569317
-          token: ${{ secrets.PAT }}
+          # token: ${{ secrets.PAT }}
           #token: ${{ steps.generate_token.outputs.token }}
-          #persist-credentials: false
+          persist-credentials: false
 
       #- name: Setup Node.js
       #  uses: actions/setup-node@v3
@@ -63,5 +63,6 @@ jobs:
       #    GH_TOKEN: ${{ secrets.PAT }}
 
       - run: |
+          git config 
           git tag v1.0.16
           git push "https://twang817:${{ secrets.PAT }}@github.com/twang817/test-release" --tags
