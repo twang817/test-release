@@ -39,13 +39,21 @@ jobs:
           # https://github.com/semantic-release/github/issues/175#issuecomment-1122569317
           token: ${{ steps.generate_token.outputs.token }}
 
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          extra_plugins: |
-            conventional-changelog-conventionalcommits
-            @semantic-release/changelog
-            @google/semantic-release-replace-plugin
-            @semantic-release/git
+          node-version: "lts/*"
+
+      - name: Install dependencies
+        run: |
+          npm i -g semantic-release
+          npm i -g conventional-changelog-conventionalcommits
+          npm i -g @semantic-release/changelog
+          npm i -g @google/semantic-release-replace-plugin
+          npm i -g @semantic-release/git
+
+      - name: Semantic Release
+        run: |
+          semantic-release --debug
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
