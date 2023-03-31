@@ -37,7 +37,8 @@ jobs:
         with:
           fetch-depth: 0
           # https://github.com/semantic-release/github/issues/175#issuecomment-1122569317
-          token: ${{ steps.generate_token.outputs.token }}
+          #token: ${{ steps.generate_token.outputs.token }}
+          token: ${{ secrets.PAT }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
