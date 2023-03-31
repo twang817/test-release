@@ -1,8 +1,8 @@
 name: Update Semver
+
 on:
-  push:
-    tags:
-      - 'v*.*.*'
+  push: [tags]
+
 jobs:
   update-semver:
     runs-on: ubuntu-latest
