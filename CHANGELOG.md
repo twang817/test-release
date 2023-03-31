@@ -3,6 +3,36 @@
 
 ### Bug Fixes
 
+* foo ([fc1963d](https://github.com/twang817/test-release/commit/fc1963da30b5b27e4d5469660d885fbff634f101))
+* foo ([4f52fef](https://github.com/twang817/test-release/commit/4f52fef0ad2d3e4f81d77ec8202d2f7e69818946))
+* foo ([895e5bc](https://github.com/twang817/test-release/commit/895e5bce89114fbc4a6bef0aeec64ff23cc60f91))
+* foo ([43b9e6f](https://github.com/twang817/test-release/commit/43b9e6fe3b1c4f6f8dd8ebd59d5b55de6062535f))
+* foo ([d44c49e](https://github.com/twang817/test-release/commit/d44c49ebb4653c89151a09ef184d998b7bf06788))
+* foo ([e7e026c](https://github.com/twang817/test-release/commit/e7e026cb74c8a2b8489a42b7376f6a4c76d6e780))
+* foo ([226ce70](https://github.com/twang817/test-release/commit/226ce701fee121a29c682db198fda9716de5ef40))
+* foo ([72d64f4](https://github.com/twang817/test-release/commit/72d64f4ba967c538ac210263269d41c14fc844f3))
+* foo ([173dc14](https://github.com/twang817/test-release/commit/173dc14c4facd724a69de98efe6fbe8505c3a92e))
+* foo ([a463aeb](https://github.com/twang817/test-release/commit/a463aeb8e6762b49433afb72004606cd0dc4fab3))
+* foo ([5cb04fc](https://github.com/twang817/test-release/commit/5cb04fc80c1f93ffce5d56603eb10aec2cf89e28))
+* foo ([b53f773](https://github.com/twang817/test-release/commit/b53f77397b577f7e2fd4705323ef6e033081994a))
+* foo ([6f5e901](https://github.com/twang817/test-release/commit/6f5e90125d3ab6ef212cf920852c25686adecc03))
+* foo ([b1ce09a](https://github.com/twang817/test-release/commit/b1ce09ab4fa816c489e2b8847b4fb36076631a88))
+* foo ([7f66662](https://github.com/twang817/test-release/commit/7f66662638a792ec3d2844cc7674128de3b5b297))
+* foo ([688145b](https://github.com/twang817/test-release/commit/688145b465d26063550857c6cd7c3420ee2a040c))
+* foo ([cdf9848](https://github.com/twang817/test-release/commit/cdf9848fc1c8c91b5552218263688a50396f817a))
+* foo ([8f3a5b0](https://github.com/twang817/test-release/commit/8f3a5b0e5602e18015e30bda04552634efaf8975))
+* foo ([cdf8fbd](https://github.com/twang817/test-release/commit/cdf8fbd28f124c4834d8de6ba2ca8f37ef585cff))
+* foo ([7aa8c50](https://github.com/twang817/test-release/commit/7aa8c5066c820de03daa97ef79200fbc6da2e673))
+* foo ([484547b](https://github.com/twang817/test-release/commit/484547bf1b38ad2c5572ea5c5a7f1f9ef589faa2))
+* foo ([82c1e45](https://github.com/twang817/test-release/commit/82c1e4581094b4d2699e034c7797d0cec06ee1f1))
+* foo ([0ca30c6](https://github.com/twang817/test-release/commit/0ca30c6b4445097995f9f4be98aafa7bfd9af1f6))
+* foo ([b57f3af](https://github.com/twang817/test-release/commit/b57f3af884acde6d48e397a8a39ec1fe774d8ef5))
+
+## [1.0.16](https://github.com/twang817/test-release/compare/v1.0.15...v1.0.16) (2023-03-31)
+
+
+### Bug Fixes
+
 * foo ([d44c49e](https://github.com/twang817/test-release/commit/d44c49ebb4653c89151a09ef184d998b7bf06788))
 * foo ([e7e026c](https://github.com/twang817/test-release/commit/e7e026cb74c8a2b8489a42b7376f6a4c76d6e780))
 * foo ([226ce70](https://github.com/twang817/test-release/commit/226ce701fee121a29c682db198fda9716de5ef40))
