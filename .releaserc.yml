@@ -19,6 +19,6 @@ plugins:
     - assets:
       - CHANGELOG.md
       - pyproject.toml
-    - message: "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+      message: "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
 
 preset: conventionalcommits
