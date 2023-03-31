@@ -46,7 +46,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm i -g \
-            semantic-release \
+            https://github.com/twang817/semantic-release.git#test \
             conventional-changelog-conventionalcommits \
             @semantic-release/changelog \
             @google/semantic-release-replace-plugin \
