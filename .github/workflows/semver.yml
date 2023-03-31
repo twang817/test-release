@@ -1,7 +1,9 @@
 name: Update Semver
 
 on:
-  push: [tags]
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
   update-semver:
