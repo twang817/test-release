@@ -1,0 +1,53 @@
+name: Semantic Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    concurrency: release
+
+    steps:
+      # many of semantic-release's actions require access to github api.  for
+      # example, the @semantic-release/git plugin needs to commit to the release
+      # (master) branch without requiring code reviews.  this is not possible
+      # with the GITHUB_TOKEN from the Github Actions (default) app that is
+      # automatically available in workflows.
+      #
+      # one way to do this is to use a personal access token (pat).  this really
+      # rubs me the wrong way, as it is dependent upon a single user account.
+      # this would likely create a mess later down the line.
+      #
+      # instead, we've created a github app in our org called "CSM GH Bot", and
+      # we're going to impersonate that app.
+      #
+      # currently, this bot is installed independently on one repo at a time,
+      # and its secrets are individually set in each repos secrets.
+      - name: Generate token
+        id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.BOT_APP_ID }}
+          private_key: ${{ secrets.BOT_PRIVATE_KEY }}
+
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          # https://github.com/semantic-release/github/issues/175#issuecomment-1122569317
+          token: ${{ steps.generate_token.outputs.token }}
+
+      - name: Semantic Release
+        uses: codfish/semantic-release-action@v2
+        with:
+          additional_packages: |
+            [
+              'conventional-changelog-conventionalcommits',
+              '@semantic-release/changelog',
+              '@google/semantic-release-replace-plugin',
+              '@semantic-release/git',
+            ]
+        env:
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
