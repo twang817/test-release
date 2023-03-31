@@ -11,21 +11,6 @@ jobs:
     concurrency: release
 
     steps:
-      # many of semantic-release's actions require access to github api.  for
-      # example, the @semantic-release/git plugin needs to commit to the release
-      # (master) branch without requiring code reviews.  this is not possible
-      # with the GITHUB_TOKEN from the Github Actions (default) app that is
-      # automatically available in workflows.
-      #
-      # one way to do this is to use a personal access token (pat).  this really
-      # rubs me the wrong way, as it is dependent upon a single user account.
-      # this would likely create a mess later down the line.
-      #
-      # instead, we've created a github app in our org called "CSM GH Bot", and
-      # we're going to impersonate that app.
-      #
-      # currently, this bot is installed independently on one repo at a time,
-      # and its secrets are individually set in each repos secrets.
       - name: Generate token
         id: generate_token
         uses: tibdex/github-app-token@v1
@@ -62,4 +47,3 @@ jobs:
        - run: |
            git tag v1.0.16
            git push "https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/twang817/test-release" --tags
-      
