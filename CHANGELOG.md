@@ -3,6 +3,20 @@
 
 ### Bug Fixes
 
+* foo ([cdf9848](https://github.com/twang817/test-release/commit/cdf9848fc1c8c91b5552218263688a50396f817a))
+* foo ([8f3a5b0](https://github.com/twang817/test-release/commit/8f3a5b0e5602e18015e30bda04552634efaf8975))
+* foo ([cdf8fbd](https://github.com/twang817/test-release/commit/cdf8fbd28f124c4834d8de6ba2ca8f37ef585cff))
+* foo ([7aa8c50](https://github.com/twang817/test-release/commit/7aa8c5066c820de03daa97ef79200fbc6da2e673))
+* foo ([484547b](https://github.com/twang817/test-release/commit/484547bf1b38ad2c5572ea5c5a7f1f9ef589faa2))
+* foo ([82c1e45](https://github.com/twang817/test-release/commit/82c1e4581094b4d2699e034c7797d0cec06ee1f1))
+* foo ([0ca30c6](https://github.com/twang817/test-release/commit/0ca30c6b4445097995f9f4be98aafa7bfd9af1f6))
+* foo ([b57f3af](https://github.com/twang817/test-release/commit/b57f3af884acde6d48e397a8a39ec1fe774d8ef5))
+
+## [1.0.16](https://github.com/twang817/test-release/compare/v1.0.15...v1.0.16) (2023-03-31)
+
+
+### Bug Fixes
+
 * foo ([cdf8fbd](https://github.com/twang817/test-release/commit/cdf8fbd28f124c4834d8de6ba2ca8f37ef585cff))
 * foo ([7aa8c50](https://github.com/twang817/test-release/commit/7aa8c5066c820de03daa97ef79200fbc6da2e673))
 * foo ([484547b](https://github.com/twang817/test-release/commit/484547bf1b38ad2c5572ea5c5a7f1f9ef589faa2))
