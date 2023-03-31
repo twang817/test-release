@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "test-release"
-version = "1.0.17"
+version = "1.0.18"
 description = ""
 authors = ["Tommy Wang <twang@crossscreen.media>"]
 readme = "README.md"
