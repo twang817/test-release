@@ -62,4 +62,3 @@ jobs:
       # - run: |
       #     git tag v1.0.16
       #     git push "https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/twang817/test-release" --tags
-      #
