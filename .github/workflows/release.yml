@@ -26,8 +26,8 @@ jobs:
       - run: |
           which git
           echo "${{ steps.generate_token.outputs.token }}" | sed 's/./& /g'
-          git tag v1.0.16
-          git push --tags "https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/twang817/test-release"
+          #git tag v1.0.16
+          #git push --tags "https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/twang817/test-release"
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
