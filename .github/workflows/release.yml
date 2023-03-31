@@ -37,8 +37,8 @@ jobs:
         with:
           fetch-depth: 0
           # https://github.com/semantic-release/github/issues/175#issuecomment-1122569317
-          #token: ${{ steps.generate_token.outputs.token }}
-          token: ${{ secrets.PAT }}
+          token: ${{ steps.generate_token.outputs.token }}
+          #token: ${{ secrets.PAT }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -47,15 +47,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm i -g semantic-release
-          npm i -g conventional-changelog-conventionalcommits
-          npm i -g @semantic-release/changelog
-          npm i -g @google/semantic-release-replace-plugin
-          npm i -g @semantic-release/git
+          npm i -g \
+            semantic-release \
+            conventional-changelog-conventionalcommits \
+            @semantic-release/changelog \
+            @google/semantic-release-replace-plugin \
+            @semantic-release/git
 
       - name: Semantic Release
         run: |
           semantic-release --debug
         env:
-          #GH_TOKEN: ${{ steps.generate_token.outputs.token }}
-          GH_TOKEN: ${{ secrets.PAT }}
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+          #GH_TOKEN: ${{ secrets.PAT }}
