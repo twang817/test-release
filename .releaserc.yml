@@ -14,10 +14,4 @@ plugins:
         from: "version = \".*\""
         to: "version = \"${nextRelease.version}\""
 
-  # commit CHANGELOG.md and pyproject.toml
-  - - '@semantic-release/git'
-    - assets:
-      - CHANGELOG.md
-      - pyproject.toml
-
 preset: conventionalcommits
