@@ -40,14 +40,12 @@ jobs:
           token: ${{ steps.generate_token.outputs.token }}
 
       - name: Semantic Release
-        uses: codfish/semantic-release-action@v2
+        uses: cycjimmy/semantic-release-action@v3
         with:
-          additional_packages: |
-            [
-              'conventional-changelog-conventionalcommits',
-              '@semantic-release/changelog',
-              '@google/semantic-release-replace-plugin',
-              '@semantic-release/git',
-            ]
+          extra_plugins: |
+            conventional-changelog-conventionalcommits
+            @semantic-release/changelog
+            @google/semantic-release-replace-plugin
+            @semantic-release/git
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
