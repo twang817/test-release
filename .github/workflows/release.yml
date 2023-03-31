@@ -41,6 +41,7 @@ jobs:
             conventional-changelog-conventionalcommits \
             @semantic-release/changelog \
             @google/semantic-release-replace-plugin \
+            @semantic-release/git
 
       - name: Semantic Release
         run: |
