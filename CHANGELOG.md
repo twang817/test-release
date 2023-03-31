@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/twang817/test-release/compare/v1.0.12...v1.0.13) (2023-03-31)
+
+
+### Bug Fixes
+
+* foo ([9ecbbbd](https://github.com/twang817/test-release/commit/9ecbbbddcd618904e237adaf8fa1c0f659abc82d))
+
 ## [1.0.12](https://github.com/twang817/test-release/compare/v1.0.11...v1.0.12) (2023-03-31)
 
 
