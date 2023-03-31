@@ -59,4 +59,4 @@ jobs:
           semantic-release --debug
         env:
           #GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GH_TOKEN: ${{ secrets.PAT }}
