@@ -37,6 +37,7 @@ jobs:
         with:
           fetch-depth: 0
           # https://github.com/semantic-release/github/issues/175#issuecomment-1122569317
+          token: ${{ secrets.PAT }}
           #token: ${{ steps.generate_token.outputs.token }}
           #persist-credentials: false
 
