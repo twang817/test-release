@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
+        #with:
           #token: ${{ steps.generate_token.outputs.token }}
-          token: ${{ secrets.PAT }}
+          #token: ${{ secrets.PAT }}
       - uses: haya14busa/action-update-semver@v1

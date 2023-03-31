@@ -38,8 +38,7 @@ jobs:
           fetch-depth: 0
           # https://github.com/semantic-release/github/issues/175#issuecomment-1122569317
           #token: ${{ steps.generate_token.outputs.token }}
-          #persist-credentials: false
-          token: ${{ secrets.PAT }}
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -59,5 +58,5 @@ jobs:
         run: |
           semantic-release --debug
         env:
-          #GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+          #GITHUB_TOKEN: ${{ secrets.PAT }}
